@@ -14,7 +14,19 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  raise TriangleError, "why the exception happened" if (a<=0 || b<+0 || c<=0)
+
+  end
+  ab = (a==b)
+  bc = (b==c)
+  ca = (c==a)
+  if ab && bc
+    :equilateral
+  elsif ab || bc || ca
+    :isosceles
+  else
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
