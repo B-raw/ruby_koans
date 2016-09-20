@@ -14,9 +14,8 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  raise TriangleError, "why the exception happened" if (a<=0 || b<+0 || c<=0)
-
-  end
+  raise TriangleError, "One of the sides is of 0 or negative length!" if (a<=0 || b<+0 || c<=0)
+  raise TriangleError, "That is not a triangle!" if a >= b+c || b >= a+c || c >= a+b
   ab = (a==b)
   bc = (b==c)
   ca = (c==a)
